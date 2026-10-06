@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/routine_card"
+    style="@style/Widget.App.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/screen_margin"
+    android:layout_marginEnd="@dimen/screen_margin"
+    android:layout_marginBottom="@dimen/gap_s"
+    android:minHeight="84dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/gap_m"
+        android:paddingTop="@dimen/gap_m"
+        android:paddingEnd="@dimen/gap_m"
+        android:paddingBottom="@dimen/gap_m">
+
+        <ImageView
+            android:id="@+id/routine_sprite"
+            android:layout_width="@dimen/sprite_item"
+            android:layout_height="@dimen/sprite_item"
+            android:background="@drawable/bg_sprite_tile"
+            android:contentDescription="@string/cd_step_icon"
+            android:padding="4dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sprite_sunrise" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/gap_m"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/routine_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.App.Title" />
+
+            <TextView
+                android:id="@+id/routine_meta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="@style/TextAppearance.App.Label.Tiny" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_xs"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.quietroutine.app.core.ui.StepProgressView
+                    android:id="@+id/routine_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/routine_consistency"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/gap_s"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:textColor="@color/sage"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

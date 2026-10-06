@@ -1,0 +1,8 @@
+{
+  "outcome": "running",
+  "fix_type": "transient",
+  "resume_from": "test-ui",
+  "message": "Resuming from test-ui (transient)…",
+  "log": "projects/QuietRoutine/.resume-20261006-223118.log",
+  "attempted_at_epoch": 1791318680
+}

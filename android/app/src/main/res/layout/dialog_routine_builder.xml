@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/builder_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialog_gradient"
+    android:paddingTop="@dimen/status_bar_pad">
+
+    <LinearLayout
+        android:id="@+id/builder_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/screen_margin"
+        android:paddingEnd="@dimen/gap_s">
+
+        <TextView
+            android:id="@+id/builder_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/builder_title"
+            android:textAppearance="@style/TextAppearance.App.Display.Medium"
+            android:textSize="22sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/builder_close"
+            style="@style/Widget.App.Button.Icon"
+            android:layout_width="@dimen/touch_min"
+            android:layout_height="@dimen/touch_min"
+            android:contentDescription="@string/cd_close"
+            app:icon="@drawable/ic_close" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/builder_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/screen_margin"
+        android:paddingEnd="@dimen/screen_margin"
+        android:paddingBottom="@dimen/gap_l">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/builder_save"
+            style="@style/Widget.App.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/cta_save_routine" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/builder_cancel"
+            style="@style/Widget.App.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_secondary"
+            android:layout_marginTop="@dimen/gap_s"
+            android:text="@string/cta_cancel" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/builder_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/builder_actions"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:layout_marginBottom="@dimen/gap_s"
+        android:accessibilityLiveRegion="polite"
+        android:textColor="@color/terracotta"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/builder_add_step"
+        style="@style/Widget.App.Button.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_secondary"
+        android:layout_above="@id/builder_error"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:layout_marginBottom="@dimen/gap_s"
+        android:text="@string/builder_add_step"
+        app:icon="@drawable/ic_add" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/builder_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/builder_add_step"
+        android:layout_below="@id/builder_header"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/screen_margin"
+        android:paddingTop="@dimen/gap_m"
+        android:paddingEnd="@dimen/screen_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/gap_m">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/builder_name_layout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/builder_name_hint"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="@color/sage_soft">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/builder_name_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:textColor="@color/ink" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/builder_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_m"
+                app:selectionRequired="false"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cat_morning"
+                    style="@style/Widget.App.Toggle.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="@string/cat_morning" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cat_evening"
+                    style="@style/Widget.App.Toggle.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="@string/cat_evening" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cat_focus"
+                    style="@style/Widget.App.Toggle.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="@string/cat_focus" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/builder_categories_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_s"
+                app:selectionRequired="false"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cat_move"
+                    style="@style/Widget.App.Toggle.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="@string/cat_move" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cat_calm"
+                    style="@style/Widget.App.Toggle.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="@string/cat_calm" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cat_care"
+                    style="@style/Widget.App.Toggle.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="@string/cat_care" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.quietroutine.app.core.ui.SectionHeaderView
+                android:id="@+id/builder_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_l"
+                app:sectionTitle="@string/builder_section_steps" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/builder_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_s"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:id="@+id/builder_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_l"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/empty_icon"
+                    android:layout_height="@dimen/empty_icon"
+                    android:contentDescription="@string/cd_empty_icon"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_steps" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gap_s"
+                    android:text="@string/builder_empty_title"
+                    android:textColor="@color/ink_soft"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/builder_empty_body"
+                    android:textColor="@color/ink_muted"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

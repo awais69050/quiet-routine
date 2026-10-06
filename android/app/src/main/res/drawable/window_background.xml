@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:startColor="@color/sage_deep"
+                android:centerColor="@color/sage_dark"
+                android:endColor="@color/sage"
+                android:type="linear" />
+        </shape>
+    </item>
+    <item
+        android:width="96dp"
+        android:height="96dp"
+        android:gravity="center"
+        android:drawable="@drawable/ic_brand_mark" />
+</layer-list>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/history_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialog_gradient"
+    android:paddingTop="@dimen/status_bar_pad">
+
+    <LinearLayout
+        android:id="@+id/history_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/screen_margin"
+        android:paddingEnd="@dimen/gap_s">
+
+        <TextView
+            android:id="@+id/history_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/history_title"
+            android:textAppearance="@style/TextAppearance.App.Display.Medium"
+            android:textSize="22sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/history_close"
+            style="@style/Widget.App.Button.Icon"
+            android:layout_width="@dimen/touch_min"
+            android:layout_height="@dimen/touch_min"
+            android:contentDescription="@string/cd_close"
+            app:icon="@drawable/ic_close" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/history_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/history_header"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/screen_margin"
+        android:paddingTop="@dimen/gap_m"
+        android:paddingEnd="@dimen/screen_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/gap_xl">
+
+            <com.quietroutine.app.core.ui.SectionHeaderView
+                android:id="@+id/history_section_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:sectionTitle="@string/history_section_days" />
+
+            <LinearLayout
+                android:id="@+id/history_bars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_m"
+                android:gravity="bottom"
+                android:minHeight="@dimen/history_bar_height"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/history_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_l"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.quietroutine.app.core.ui.StatCardView
+                    android:id="@+id/history_stat_best"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:statAccent="@color/sage"
+                    app:statLabel="@string/stat_best_streak" />
+
+                <com.quietroutine.app.core.ui.StatCardView
+                    android:id="@+id/history_stat_avg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/gap_s"
+                    android:layout_weight="1"
+                    app:statAccent="@color/terracotta"
+                    app:statLabel="@string/stat_avg_done" />
+
+                <com.quietroutine.app.core.ui.StatCardView
+                    android:id="@+id/history_stat_runs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/gap_s"
+                    android:layout_weight="1"
+                    app:statAccent="@color/sage_soft"
+                    app:statLabel="@string/stat_runs" />
+
+            </LinearLayout>
+
+            <com.quietroutine.app.core.ui.SectionHeaderView
+                android:id="@+id/history_section_runs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_l"
+                app:sectionTitle="@string/history_section_runs" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/history_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_s"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:id="@+id/history_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_l"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/empty_icon"
+                    android:layout_height="@dimen/empty_icon"
+                    android:contentDescription="@string/history_empty_title"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_history" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/gap_s"
+                    android:text="@string/history_empty_title"
+                    android:textColor="@color/ink_soft"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/history_empty_body"
+                    android:textColor="@color/ink_muted"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

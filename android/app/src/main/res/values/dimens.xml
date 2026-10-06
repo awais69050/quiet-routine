@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_margin">24dp</dimen>
+    <dimen name="card_radius">14dp</dimen>
+    <dimen name="card_radius_lg">18dp</dimen>
+    <dimen name="button_radius">16dp</dimen>
+    <dimen name="button_height_primary">60dp</dimen>
+    <dimen name="button_height_secondary">48dp</dimen>
+    <dimen name="touch_min">48dp</dimen>
+    <dimen name="header_height">72dp</dimen>
+    <dimen name="status_bar_pad">44dp</dimen>
+    <dimen name="controls_height">196dp</dimen>
+    <dimen name="sprite_item">48dp</dimen>
+    <dimen name="sprite_step">72dp</dimen>
+    <dimen name="timer_ring">96dp</dimen>
+    <dimen name="result_ring">140dp</dimen>
+    <dimen name="gap_xs">6dp</dimen>
+    <dimen name="gap_s">10dp</dimen>
+    <dimen name="gap_m">16dp</dimen>
+    <dimen name="gap_l">24dp</dimen>
+    <dimen name="gap_xl">32dp</dimen>
+    <dimen name="hairline">1dp</dimen>
+    <dimen name="rule_width">64dp</dimen>
+    <dimen name="dot_size">10dp</dimen>
+    <dimen name="dot_gap">8dp</dimen>
+    <dimen name="accent_dot">8dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <dimen name="brand_mark">96dp</dimen>
+    <dimen name="splash_indicator_width">148dp</dimen>
+    <dimen name="empty_icon">64dp</dimen>
+    <dimen name="history_bar_width">10dp</dimen>
+    <dimen name="history_bar_height">96dp</dimen>
+    <dimen name="row_height">56dp</dimen>
+    <dimen name="menu_art_height">280dp</dimen>
+</resources>

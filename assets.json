@@ -1,0 +1,54 @@
+{
+  "assets": [
+    {
+      "name": "icon_1024",
+      "type": "icon",
+      "prompt": "App icon, one single glossy 3D sage green circular progress ring with a small terracotta checkmark inside it, centered, soft warm cream radial gradient background, crisp, clean, no text, no scene"
+    },
+    {
+      "name": "bg_splash",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile app background, deep muted sage green paper texture, very soft vignette, calm minimal, no text, no UI elements"
+    },
+    {
+      "name": "bg_menu",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile app background, warm cream paper with faint sage botanical line pattern in the lower right, airy and minimal, no text, no UI elements"
+    },
+    {
+      "name": "bg_active",
+      "type": "bg",
+      "prompt": "Vertical 9:16 mobile app background, soft blurred cream and sage gradient, very low contrast for UI overlay, minimal, no text, no UI elements"
+    },
+    {
+      "name": "sprite_sunrise",
+      "type": "sprite",
+      "prompt": "One single cute flat illustration sunrise over a horizon line, muted sage and terracotta palette, centered icon, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_moon",
+      "type": "sprite",
+      "prompt": "One single cute flat illustration crescent moon, muted sage and cream palette, centered icon, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_leaf",
+      "type": "sprite",
+      "prompt": "One single cute flat illustration leaf sprig, muted sage palette, centered icon, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_cup",
+      "type": "sprite",
+      "prompt": "One single cute flat illustration ceramic mug with steam, terracotta and cream palette, centered icon, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_stretch",
+      "type": "sprite",
+      "prompt": "One single cute flat illustration person stretching silhouette, muted sage palette, centered icon, isolated on plain white, no other objects"
+    },
+    {
+      "name": "sprite_candle",
+      "type": "sprite",
+      "prompt": "One single cute flat illustration lit candle, cream and terracotta palette, centered icon, isolated on plain white, no other objects"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiet Routine</string>
+
+    <string name="splash_title">QUIET ROUTINE</string>
+    <string name="splash_subtitle">ONE STEP AT A TIME</string>
+    <string name="splash_loading">PREPARING YOUR ROUTINES</string>
+
+    <string name="menu_title_top">QUIET</string>
+    <string name="menu_title_bottom">ROUTINE</string>
+    <string name="menu_subtitle">YOUR ROUTINES</string>
+    <string name="menu_hint">Pick a routine below, then run it</string>
+    <string name="cta_start">START ROUTINE</string>
+    <string name="cta_new_routine">NEW ROUTINE</string>
+    <string name="cta_history">HISTORY</string>
+    <string name="cd_settings">Open settings</string>
+
+    <string name="stat_streak">DAY STREAK</string>
+    <string name="stat_done_today">DONE TODAY</string>
+    <string name="stat_routines">ROUTINES</string>
+    <string name="stat_time">TIME</string>
+    <string name="stat_skipped">SKIPPED</string>
+    <string name="stat_best_streak">BEST STREAK</string>
+    <string name="stat_avg_done">AVG DONE</string>
+    <string name="stat_runs">RUNS</string>
+
+    <string name="game_step_counter">STEP %1$d / %2$d</string>
+    <string name="game_next">NEXT: %1$s</string>
+    <string name="game_next_summary">NEXT: SUMMARY</string>
+    <string name="cta_done">DONE</string>
+    <string name="cta_skip">SKIP</string>
+    <string name="cta_finish">FINISH</string>
+    <string name="cd_back">Go back</string>
+    <string name="cd_step_icon">Routine category icon</string>
+
+    <string name="result_complete">ROUTINE COMPLETE</string>
+    <string name="result_ended">ROUTINE ENDED</string>
+    <string name="result_steps_done">STEPS DONE</string>
+    <string name="result_ratio">%1$d/%2$d</string>
+    <string name="cta_run_again">RUN AGAIN</string>
+    <string name="cta_menu">MENU</string>
+    <string name="cd_step_done">Step completed</string>
+    <string name="cd_step_skipped">Step skipped</string>
+
+    <string name="builder_title">NEW ROUTINE</string>
+    <string name="builder_name_hint">Routine name</string>
+    <string name="builder_name_error">Give the routine a name</string>
+    <string name="builder_steps_error">Add at least one step</string>
+    <string name="builder_add_step">ADD STEP</string>
+    <string name="builder_step_hint">Step name</string>
+    <string name="builder_step_detail">added by you</string>
+    <string name="builder_empty_title">No steps yet</string>
+    <string name="builder_empty_body">Add the first thing you do</string>
+    <string name="cta_save_routine">SAVE ROUTINE</string>
+    <string name="cta_cancel">CANCEL</string>
+    <string name="cd_close">Close</string>
+    <string name="cd_move_up">Move step up</string>
+    <string name="cd_move_down">Move step down</string>
+    <string name="cd_remove_step">Remove step</string>
+    <string name="cd_empty_icon">No steps illustration</string>
+    <string name="builder_section_steps">STEPS</string>
+
+    <string name="history_title">HISTORY</string>
+    <string name="history_section_days">LAST 14 DAYS</string>
+    <string name="history_section_runs">RECENT RUNS</string>
+    <string name="history_empty_title">Nothing logged yet</string>
+    <string name="history_empty_body">Finish a routine to see it here</string>
+    <string name="history_run_summary">%1$d/%2$d · %3$s</string>
+
+    <string name="settings_title">SETTINGS</string>
+    <string name="settings_auto_advance">Auto-advance steps</string>
+    <string name="settings_keep_awake">Keep screen awake</string>
+    <string name="settings_reduced_motion">Reduced motion</string>
+    <string name="settings_step_length">STEP LENGTH</string>
+    <string name="settings_reset">RESET HISTORY</string>
+    <string name="settings_offline">Everything stays on this device</string>
+    <string name="settings_reset_title">Reset history</string>
+    <string name="settings_reset_body">This clears every logged run on this device.</string>
+    <string name="settings_reset_confirm">RESET</string>
+
+    <string name="len_1">1</string>
+    <string name="len_2">2</string>
+    <string name="len_5">5</string>
+    <string name="len_10">10</string>
+
+    <string name="cat_morning">MORNING</string>
+    <string name="cat_evening">EVENING</string>
+    <string name="cat_focus">FOCUS</string>
+    <string name="cat_move">MOVE</string>
+    <string name="cat_calm">CALM</string>
+    <string name="cat_care">CARE</string>
+
+    <string name="state_selected">Selected routine</string>
+    <string name="state_not_selected">Not selected</string>
+    <string name="state_on">On</string>
+    <string name="state_off">Off</string>
+    <string name="state_running">Running</string>
+    <string name="state_finishing">Finishing</string>
+
+    <string name="routine_meta">%1$d STEPS · %2$d MIN</string>
+    <string name="routine_consistency">%1$d%%</string>
+    <string name="step_meta">%1$d min · %2$s</string>
+    <string name="section_rule_cd">Section divider</string>
+</resources>

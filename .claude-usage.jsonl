@@ -1,0 +1,4 @@
+{"type":"call","ts":1791193756,"task":"diagnose","model":"haiku","model_id":"claude-haiku-4-5"}
+{"type":"call","ts":1791194320,"task":"approve-kotlin","model":"opus","model_id":"claude-opus-5"}
+{"type":"call","ts":1791197340,"task":"heal-build","model":"opus","model_id":"claude-opus-5"}
+{"type":"call","ts":1791318992,"task":"approve-kotlin","model":"opus","model_id":"claude-opus-5"}

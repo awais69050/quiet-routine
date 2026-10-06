@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.QuietRoutine" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/sage</item>
+        <item name="colorOnPrimary">@color/on_sage</item>
+        <item name="colorPrimaryContainer">@color/paper_shade</item>
+        <item name="colorOnPrimaryContainer">@color/ink</item>
+        <item name="colorSecondary">@color/terracotta</item>
+        <item name="colorOnSecondary">@color/on_terracotta</item>
+        <item name="colorSecondaryContainer">@color/terracotta_tint</item>
+        <item name="colorOnSecondaryContainer">@color/ink</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="colorSurfaceVariant">@color/paper_deep</item>
+        <item name="colorOnSurfaceVariant">@color/ink_soft</item>
+        <item name="colorOutline">@color/divider</item>
+        <item name="colorOutlineVariant">@color/sage_soft</item>
+        <item name="colorError">@color/terracotta</item>
+        <item name="android:colorBackground">@color/paper</item>
+        <item name="colorOnBackground">@color/ink</item>
+        <item name="android:windowBackground">@drawable/window_background</item>
+        <item name="android:statusBarColor">@color/paper_deep</item>
+        <item name="android:navigationBarColor">@color/paper_deep</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:textColorPrimary">@color/ink</item>
+        <item name="android:textColorSecondary">@color/ink_muted</item>
+    </style>
+
+    <style name="Dialog.App.FullScreen" parent="Theme.Material3.Light.Dialog">
+        <item name="android:windowBackground">@color/paper</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@color/paper_deep</item>
+        <item name="android:navigationBarColor">@color/paper_deep</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimary">@color/sage</item>
+        <item name="colorOnPrimary">@color/on_sage</item>
+        <item name="colorSecondary">@color/terracotta</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="colorOutline">@color/divider</item>
+        <item name="colorError">@color/terracotta</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Alert" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorPrimary">@color/sage</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/ink</item>
+    </style>
+</resources>

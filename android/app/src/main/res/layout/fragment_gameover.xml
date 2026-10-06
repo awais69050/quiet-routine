@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/result_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_result_gradient">
+
+    <View
+        android:id="@+id/result_blob"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="-60dp"
+        android:layout_marginEnd="-60dp"
+        android:background="@drawable/decor_blob"
+        android:importantForAccessibility="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginTop="@dimen/status_bar_pad"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:textAppearance="@style/TextAppearance.App.Display.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginTop="@dimen/gap_xs"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:letterSpacing="0.16"
+        android:textColor="@color/ink_muted"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/result_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/gap_m"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/result_again"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result_subtitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/gap_m">
+
+            <FrameLayout
+                android:layout_width="@dimen/result_ring"
+                android:layout_height="@dimen/result_ring"
+                android:layout_gravity="center_horizontal">
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/result_ring"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminate="false"
+                    app:indicatorColor="@color/sage"
+                    app:indicatorSize="@dimen/result_ring"
+                    app:trackColor="@color/paper_shade"
+                    app:trackCornerRadius="4dp"
+                    app:trackThickness="7dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/result_ratio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:accessibilityLiveRegion="polite"
+                        android:textAppearance="@style/TextAppearance.App.Numeric.Large" />
+
+                    <TextView
+                        android:id="@+id/result_ratio_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/result_steps_done"
+                        android:textAppearance="@style/TextAppearance.App.Label.Tiny" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/result_stats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/gap_l"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.quietroutine.app.core.ui.StatCardView
+                    android:id="@+id/result_stat_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:statAccent="@color/sage"
+                    app:statLabel="@string/stat_time" />
+
+                <com.quietroutine.app.core.ui.StatCardView
+                    android:id="@+id/result_stat_skipped"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/gap_s"
+                    android:layout_weight="1"
+                    app:statAccent="@color/sage_soft"
+                    app:statLabel="@string/stat_skipped" />
+
+                <com.quietroutine.app.core.ui.StatCardView
+                    android:id="@+id/result_stat_streak"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/gap_s"
+                    android:layout_weight="1"
+                    app:statAccent="@color/terracotta"
+                    app:statLabel="@string/stat_streak" />
+
+            </LinearLayout>
+
+            <com.quietroutine.app.core.ui.SectionHeaderView
+                android:id="@+id/result_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/gap_l"
+                android:layout_marginEnd="@dimen/screen_margin"
+                app:sectionTitle="@string/builder_section_steps" />
+
+            <LinearLayout
+                android:id="@+id/result_steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_margin"
+                android:layout_marginTop="@dimen/gap_s"
+                android:layout_marginEnd="@dimen/screen_margin"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/result_again"
+        style="@style/Widget.App.Button.Primary.Accent"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height_primary"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:layout_marginBottom="@dimen/gap_s"
+        android:text="@string/cta_run_again"
+        app:layout_constraintBottom_toTopOf="@id/result_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/result_secondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:layout_marginBottom="@dimen/gap_l"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/result_menu"
+            style="@style/Widget.App.Button.Secondary"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_secondary"
+            android:layout_weight="1"
+            android:text="@string/cta_menu" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/result_history"
+            style="@style/Widget.App.Button.Secondary"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height_secondary"
+            android:layout_marginStart="@dimen/gap_s"
+            android:layout_weight="1"
+            android:text="@string/cta_history" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
